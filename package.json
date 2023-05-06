@@ -8,5 +8,9 @@
     "styled-components": "^5.3.10",
     "typescript": "^5.0.4",
     "vite": "^4.3.5"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
   }
 }
