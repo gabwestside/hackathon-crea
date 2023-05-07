@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import themeType from './types/theme'
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -12,17 +13,6 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Inter', sans-serif;
   }
 `
-
-type themeType = {
-  primaryColor: string
-  secondaryColor: string
-  textColor: string
-  backgroundColor: string
-  buttonColor: string
-  buttonTextColor: string
-  linkColor: string
-  linkHoverColor: string
-}
 
 export const theme: themeType = {
   primaryColor: '#152852',

@@ -1,16 +1,20 @@
-import React, { useState } from 'react'
+import React, { ReactNode, useState } from 'react'
 import { TiTick } from 'react-icons/ti'
 
 import * as Styled from './styles'
 
-const Stepper = () => {
-  const steps = ['Customer Info', 'Shipping Info', 'Payment', 'Step 4']
+interface StepperProps {
+  steps: string[]
+  children?: ReactNode | ReactNode[]
+}
+
+const Stepper: React.FC<StepperProps> = ({ steps, children }) => {
   const [currentStep, setCurrentStep] = useState(1)
   const [complete, setComplete] = useState(false)
 
   return (
-    <>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <Styled.Container>
+      <Styled.HeaderSteps>
         {steps.map((step, i) => (
           <Styled.StepItem key={i} notFirst={i !== 0}>
             <Styled.Step
@@ -19,24 +23,30 @@ const Stepper = () => {
             >
               {i + 1 < currentStep || complete ? <TiTick size={24} /> : i + 1}
             </Styled.Step>
+
             <Styled.StepText complete={i + 1 < currentStep || complete}>
               {step}
             </Styled.StepText>
           </Styled.StepItem>
         ))}
-      </div>
-      {!complete && (
-        <Styled.Button
-          onClick={() => {
-            currentStep === steps.length
-              ? setComplete(true)
-              : setCurrentStep((prev) => prev + 1)
-          }}
-        >
-          {currentStep === steps.length ? 'Finish' : 'Next'}
-        </Styled.Button>
-      )}
-    </>
+      </Styled.HeaderSteps>
+
+      <Styled.MidContent>{children}</Styled.MidContent>
+
+      <Styled.ButtonContent>
+        {!complete && (
+          <Styled.Button
+            onClick={() => {
+              currentStep === steps.length
+                ? setComplete(true)
+                : setCurrentStep((prev) => prev + 1)
+            }}
+          >
+            {currentStep === steps.length ? 'Finish' : 'Next'}
+          </Styled.Button>
+        )}
+      </Styled.ButtonContent>
+    </Styled.Container>
   )
 }
 
