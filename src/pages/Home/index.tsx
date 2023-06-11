@@ -1,7 +1,7 @@
 import React from 'react'
 import Stepper from '../../components/Steppers'
 
-import { Container } from './styles'
+import { Container } from './style'
 
 export const Home = () => {
   return (
@@ -9,7 +9,6 @@ export const Home = () => {
       <Stepper
         steps={[
           'Dados Informativos',
-          'Entidades e Ação',
           'Atividades contratadas',
           'Contrato',
           'Opcionais',
