@@ -7,6 +7,7 @@ type themeType = {
   buttonTextColor: string
   linkColor: string
   linkHoverColor: string
+  confirmColor: string
 }
 
 export default themeType
