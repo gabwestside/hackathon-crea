@@ -23,6 +23,7 @@ export const theme: themeType = {
   buttonTextColor: '#fff',
   linkColor: '#152852',
   linkHoverColor: '#9ab3ec',
+  confirmColor: '#48bb78'
 }
 
 export default GlobalStyles
