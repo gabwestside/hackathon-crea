@@ -11,8 +11,10 @@ export const Container = styled.div`
 `
 
 export const MidContent = styled.div`
-  /* width: 100vw;
-  height: 100vh; */
+  width: 100%;
+  height: 50vh;
+
+  border: 1px solid green;
 `
 
 export const HeaderSteps = styled.div`
@@ -72,7 +74,11 @@ export const Step = styled.div`
   ${({ complete }) =>
     complete &&
     css`
-      background-color: #48bb78;
+      background-color: ${({ theme }) => theme.confirmColor};
+
+      &::before {
+        background-color: ${({ theme }) => theme.confirmColor};
+      }
     `}
 `
 
@@ -101,8 +107,8 @@ export const Button = styled.button`
   margin-top: 2.4rem;
   padding: 1rem 2rem;
   border: none;
-  background-color: #48bb78;
-  color: #fff;
+  background-color: ${({ theme }) => theme.confirmColor};
+  color: ${({ theme }) => theme.buttonTextColor};
   font-weight: bold;
   border-radius: 0.8rem;
   cursor: pointer;
