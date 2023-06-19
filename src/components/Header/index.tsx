@@ -1,9 +1,9 @@
 import React from 'react'
 import { AiOutlineUser } from 'react-icons/ai';
 // @ts-ignore
-import logo from '../../assets/crea-logo.png'
+import logo from '../../_assets/crea-logo.png'
 
-import { HeaderContainer, Logo, Submenu, UserIcon } from './styles'
+import { HeaderContainer, Logo, Submenu, UserIcon } from './style'
 
 const Header = () => {
   return (

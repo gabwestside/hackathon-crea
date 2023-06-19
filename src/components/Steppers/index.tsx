@@ -1,7 +1,7 @@
 import React, { ReactNode, useState } from 'react'
 import { TiTick } from 'react-icons/ti'
 
-import * as Styled from './styles'
+import * as Styled from './style'
 
 interface StepperProps {
   steps: string[]

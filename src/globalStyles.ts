@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import themeType from './types/theme'
+import themeType from './_types/theme'
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -23,7 +23,7 @@ export const theme: themeType = {
   buttonTextColor: '#fff',
   linkColor: '#152852',
   linkHoverColor: '#9ab3ec',
-  confirmColor: '#48bb78'
+  confirmColor: '#48bb78',
 }
 
 export default GlobalStyles

@@ -1,14 +1,13 @@
 import React from 'react'
 import Header from './components/Header'
-import { Home } from './pages/Home'
-import { Login } from './pages/Login';
+
+import { Outlet } from 'react-router-dom'
 
 const App: React.FC = () => {
   return (
     <>
-      {/* <Header />
-      <Home /> */}
-      <Login />
+      <Header />
+      <Outlet />
     </>
   )
 }
